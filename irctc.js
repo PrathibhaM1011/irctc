@@ -46,3 +46,15 @@ function validateConfirmPassword() {
         document.getElementById("confirmPasswordError").innerText = "";
     }
 }
+
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (name === "" || email === "" || password === "") {
+        alert("Form cannot be submitted! All fields are required.");
+        return false; // Prevent form submission
+    }
+    return true; // Allow form submission
+}
