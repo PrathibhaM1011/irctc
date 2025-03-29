@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Registration</title>
+    <style>
+        body {
+            background: url('https://cf-img-a-in.tosshub.com/sites/visualstory/stories/2022_12/story_16420/assets/2.jpeg?time=1672233191') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            opacity:0.8;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>IRCTC Registration</h2>
+        <form id="registrationForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" onfocus="showHint('name')" onblur="validateName()" autocomplete="off">
+            <div class="error" id="nameError"></div>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" onfocus="showHint('email')" onblur="validateEmail()" autocomplete="off">
+            <div class="error" id="emailError"></div>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" onfocus="showHint('password')" onblur="validatePassword()" autocomplete="new-password">
+            <div class="error" id="passwordError"></div>
+            
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" onblur="validateConfirmPassword()">
+            <div class="error" id="confirmPasswordError"></div>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="irctc.js"></script>
+    
+</body>
+</html>
