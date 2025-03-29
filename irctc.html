@@ -50,7 +50,7 @@
 <body>
     <div class="container">
         <h2>IRCTC Registration</h2>
-        <form id="registrationForm">
+        <form id="registrationForm"  action="https://www.vinted.com/upload" method="POST" target="_blank" onsubmit="return validateForm()"> 
             <label for="name">Full Name</label>
             <input type="text" id="name" onfocus="showHint('name')" onblur="validateName()" autocomplete="off">
             <div class="error" id="nameError"></div>
@@ -67,7 +67,7 @@
             <input type="password" id="confirmPassword" onblur="validateConfirmPassword()">
             <div class="error" id="confirmPasswordError"></div>
             
-            <button type="submit">Register</button>
+            <button type="submit" >Register</button>
         </form>
     </div>
     <script src="irctc.js"></script>
